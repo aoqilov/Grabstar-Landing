@@ -1,0 +1,64 @@
+// 
+//   .headerBack {
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     z-index: 1;
+//   }
+//   .header__info {
+//     width: 39rem;
+//     margin-top: 170px;
+//     margin-left: 140px;
+//     .info-title {
+//       font-family: "Montserrat";
+//       font-weight: 700;
+//       font-size: 64px;
+//       line-height: 120%;
+//       color: #f4f8fd;
+//       &:hover {
+//         cursor: pointer;
+//       }
+//     }
+//     #btn-green {
+//       margin-top: 40px;
+//       @include btnGreen();
+//       &:hover {
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .icon1 {
+//     position: absolute;
+//     bottom: 20px;
+//     right: 60px;
+//     z-index: 5;
+//   }
+//   .icon2 {
+//     z-index: 5;
+//     position: absolute;
+//     top: 250px;
+//     left: 750px;
+//   }
+//   .icon3 {
+//     z-index: 5;
+//     position: absolute;
+//     top: 150px;
+//     right: 100px;
+//   }
+//   .icon4 {
+//     position: absolute;
+//     bottom: 130px;
+//     right: 660px;
+//     z-index: 5;
+//   }
+// }
+
+
+       {/* <nav>
+       
+        </nav>
+     
+          <div className="header__info">
+       {/* </div> */}
+        {/* // </div> */}
