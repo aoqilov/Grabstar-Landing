@@ -5,10 +5,47 @@ import hiEsher from "../assets/img/heEsher.png";
 import hiLesli from "../assets/img/heLesli.png";
 import hiNicola from "../assets/img/heNicola.png";
 import hiWood from "../assets/img/heWood.png";
-import hiStar from "../assets/img/hiStar.png";
+import hiStar from "../assets/img/hiSmallStar.png";
 import hiLine from "../assets/img/hiLine.png";
+import GreenBtn from "./UI component/GreenBtn";
+import HiredevsCard from "./UI component/HiredevsCard";
 
 const Hiretop = () => {
+  const devs = [
+    {
+      id: 1,
+      order: "one",
+      img: hiLesli,
+      name: "Leslie Alexander",
+      job: "Content Writing",
+      rating: "5.0",
+    },
+    {
+      id: 2,
+      order: "two",
+      img: hiNicola,
+      name: "Nicolas Serrano",
+      job: "UI/UX Designer",
+      rating: "5.0",
+    },
+    {
+      id: 3,
+      order: "three",
+      img: hiWood,
+      name: "Woodrow C. Greene",
+      job: "Developer",
+      rating: "5.0",
+    },
+    {
+      id: 4,
+      order: "four",
+      img: hiEsher,
+      name: "Esther Howard",
+      job: "Graphic Designer",
+      rating: "5.0",
+    },
+  ];
+
   return (
     <div>
       <div className="hire">
@@ -17,62 +54,20 @@ const Hiretop = () => {
           <div className="devsbox">
             <div className="imgbox__crcle">
               <img src={hiCrcle} alt="das" />
-              <div className="dev one">
-                <img src={hiLesli} alt="sad" />
-                <div className="info-dev">
-                  <span></span>
-                  <div className="dev-name">
-                    <h3>Nicolas Serrano</h3>
-                    <p>UI/UX Designer</p>
-                  </div>
-                  <div className="dev-rate">
-                    <img src={hiStar} alt="" />
-                    <h5>5.0</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="dev two">
-                <img src={hiNicola} alt="sad" />
-                <div className="info-dev">
-                  <span></span>
-                  <div className="dev-name">
-                    <h3>Nicolas Serrano</h3>
-                    <p>UI/UX Designer</p>
-                  </div>
-                  <div className="dev-rate">
-                    <img src={hiStar} alt="" />
-                    <h5>5.0</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="dev three">
-                <img src={hiWood} alt="sad" />
-                <div className="info-dev">
-                  <span></span>
-                  <div className="dev-name">
-                    <h3>Nicolas Serrano</h3>
-                    <p>UI/UX Designer</p>
-                  </div>
-                  <div className="dev-rate">
-                    <img src={hiStar} alt="" />
-                    <h5>5.0</h5>
-                  </div>
-                </div>
-              </div>
-              <div className="dev four">
-                <img src={hiEsher} alt="sad" />
-                <div className="info-dev">
-                  <span></span>
-                  <div className="dev-name">
-                    <h3>Nicolas Serrano</h3>
-                    <p>UI/UX Designer</p>
-                  </div>
-                  <div className="dev-rate">
-                    <img src={hiStar} alt="" />
-                    <h5>5.0</h5>
-                  </div>
-                </div>
-              </div>
+
+              {devs.map((elem) => {
+                return (
+                  <HiredevsCard
+                    key={elem.id}
+                    order={elem.order}
+                    img={elem.img}
+                    devName={elem.name}
+                    devJob={elem.job}
+                    imgStar={hiStar}
+                    rating={elem.rating}
+                  />
+                );
+              })}
             </div>
           </div>
           <div className="devs__infobox">
@@ -82,7 +77,7 @@ const Hiretop = () => {
               your service. Verify your business so your information is eligible
               to appear on Maps.
             </p>
-            <button>Checkout Profile</button>
+            <GreenBtn classNames={"checkout Profille"} />
           </div>
         </section>
       </div>

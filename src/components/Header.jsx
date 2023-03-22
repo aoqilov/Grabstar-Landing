@@ -10,6 +10,7 @@ import he15Img from "../assets/img/15K.png";
 import heMesageImg from "../assets/img/Messenger.png";
 // scss
 import "../assets/style/component/header.scss";
+import GreenBtn from "./UI component/GreenBtn";
 
 const Header = () => {
   return (
@@ -35,7 +36,7 @@ const Header = () => {
             <h1 className="info-title">
               90% Clients Hire Freelancer with Better Reviews
             </h1>
-            <button id="btn-green">Create Profile</button>
+            <GreenBtn classNames={"Create Profile"} />
           </div>
           <div className="header__images">
             <img className="headerBack" src={heBackImg} alt="" />

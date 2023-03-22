@@ -4,10 +4,43 @@ import "../assets/style/component/review.scss";
 import reBoyImg from "../assets/img/reBoy.png";
 import reGirlImg from "../assets/img/reGirl.png";
 import reJorgeImg from "../assets/img/reJorge.png";
-import reStarImg from "../assets/img/reStar.png";
 import reLine from "../assets/img/reLine.png";
+import ReviewCard from "./UI component/ReviewCard";
 
 const Review = () => {
+  const reviewCards = [
+    {
+      id: 1,
+      userImg: reBoyImg,
+      userName: "James Conway",
+      userJob: "Developer",
+      userComent: "Awesome Work!!",
+      userText:
+        "This is unbelievable. He is too fast and he work with details. Iwill hire him again.",
+      star: Array(5).fill(0),
+    },
+    {
+      id: 2,
+      userImg: reGirlImg,
+      userName: "Augustine Watkins",
+      userJob: "UX/ UI Designer",
+      userComent: "Awesome UX/ UI designer",
+      userText:
+        "Augustine is still one of the best i have had the pleasure of working with. Her professionalism and detail",
+      star: Array(1).fill(0),
+    },
+    {
+      id: 3,
+      userImg: reJorgeImg,
+      userName: "Jorge Mclaughlin",
+      userJob: "Digital Marketer",
+      userComent: "Perfection! Went above!",
+      userText:
+        "Augustine is still one of the best i have had the pleasure of working with. Her professionalism and detail",
+      star: Array(3).fill(0),
+    },
+  ];
+
   return (
     <div>
       <div className="review">
@@ -17,82 +50,25 @@ const Review = () => {
         </div>
         <div className="review__cardbox">
           <div className="cards">
-            <div className="card">
-              <div className="top__info">
-                <img src={reBoyImg} alt="" />
-                <div className="name-top">
-                  <h2>James Conway</h2>
-                  <p>Developer</p>
-                </div>
-              </div>
-              <div className="midlle__info">
-                <h1>Awesome Work!!</h1>
-                <p>
-                  This is unbelievable. He is too fast and he work with details.
-                  I will hire him again.
-                </p>
-              </div>
-              <div className="bottom__starbox">
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-              </div>
-            </div>
-            <div className="card">
-              <div className="top__info">
-                <img src={reJorgeImg} alt="" />
-                <div className="name-top">
-                  <h2>JJorge Mclaughli</h2>
-                  <p>Digital Marketer</p>
-                </div>
-              </div>
-              <div className="midlle__info">
-                <h1>Perfection! Went above!</h1>
-                <p>
-                  This is unbelievable. He is too fast and he work with details.
-                  I will hire him again.
-                </p>
-              </div>
-              <div className="bottom__starbox">
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-              </div>
-            </div>
-            <div className="card">
-              <div className="top__info">
-                <img src={reGirlImg} alt="" />
-                <div className="name-top">
-                  <h2>Augustine Watkins</h2>
-                  <p>UX/ UI Designer</p>
-                </div>
-              </div>
-              <div className="midlle__info">
-                <h1>Awesome UX/ UI designer</h1>
-                <p>
-                  This is unbelievable. He is too fast and he work with details.
-                  I will hire him again.
-                </p>
-              </div>
-              <div className="bottom__starbox">
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-                <img src={reStarImg} alt="ss" />
-              </div>
-            </div>
+            {reviewCards.map((elem) => {
+              return (
+                <ReviewCard
+                  userImg={elem.userImg}
+                  userName={elem.userName}
+                  userJob={elem.userJob}
+                  userComent={elem.userComent}
+                  userText={elem.userText}
+                  star={elem.star}
+                />
+              );
+            })}
           </div>
-          <div className="pagination__box">
-            <div className="pag">
-              <span className="crcle"></span>
-              <span className="crcle active"></span>
-              <span className="crcle"></span>
-            </div>
+        </div>
+        <div className="pagination__box">
+          <div className="pag">
+            <span className="crcle"></span>
+            <span className="crcle active"></span>
+            <span className="crcle"></span>
           </div>
         </div>
       </div>

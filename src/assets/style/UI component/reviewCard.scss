@@ -1,0 +1,63 @@
+.card-review {
+  box-shadow: 2px 2px 8px gray;
+
+  z-index: 5;
+  width: 23.5rem;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 15px;
+  padding-left: 1.9rem;
+  margin: 0 10px;
+  .top__info {
+    margin: 1.9rem 0 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    img {
+      width: 4rem;
+      height: 4rem;
+      object-fit: contain;
+    }
+    h2 {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 120%;
+      color: #263959;
+    }
+    p {
+      font-family: "Poppins";
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 120%;
+      color: rgba(38, 57, 89, 0.6);
+    }
+  }
+  .midlle__info {
+    margin-top: 1.56rem;
+    h1 {
+      font-family: "Poppins";
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 120%;
+      color: #263959;
+    }
+    p {
+      margin-top: 0.5rem;
+      font-family: "Poppins";
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 145%;
+      color: rgba(38, 57, 89, 0.65);
+    }
+  }
+  .bottom__starbox {
+    margin-top: 1.9rem;
+    img {
+      width: 1.7rem;
+      height: 1.7rem;
+      object-fit: cover;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import "../assets/style/component/home.scss";
 import Collect from "../components/Collect";
 import Expo from "../components/Expo";
 import Feature from "../components/Feature";
+import Footer from "../components/Footer";
 // icons
 import Header from "../components/Header";
 import Hiretop from "../components/Hiretop";
@@ -21,6 +22,7 @@ const Home = () => {
         <Collect />
         <Hiretop />
         <Review />
+        <Footer />
       </section>
     </div>
   );

@@ -8,6 +8,7 @@ import colRedImg from "../assets/img/colRed.png";
 import colYellowImg from "../assets/img/colYellow.png";
 import colStarImg from "../assets/img/colStar.png";
 import colLogoImg from "../assets/img/colLogo.png";
+import GreenBtn from "./UI component/GreenBtn";
 
 const Collect = () => {
   return (
@@ -22,7 +23,7 @@ const Collect = () => {
             your service. Verify your business so your information is eligible
             to appear on Maps.
           </p>
-          <button>How it Works</button>
+          <GreenBtn classNames={"How it Works"} />
         </div>
         <div className="collect__imgbox">
           <img className="mainBoyimg" src={colBoyImg} alt="" />
