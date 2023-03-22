@@ -53,6 +53,7 @@ const Review = () => {
             {reviewCards.map((elem) => {
               return (
                 <ReviewCard
+                  key={elem.id}
                   userImg={elem.userImg}
                   userName={elem.userName}
                   userJob={elem.userJob}
